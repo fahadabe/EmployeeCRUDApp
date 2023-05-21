@@ -1,0 +1,15 @@
+﻿global using System;
+global using System.Collections.Generic;
+global using System.Linq;
+global using System.Text;
+global using System.Threading.Tasks;
+global using CommunityToolkit.Mvvm.ComponentModel;
+global using SQLite;
+global using EmployeeCRUDApp.Model;
+global using EmployeeCRUDApp.View;
+global using EmployeeCRUDApp.DatabaseAccess;
+global using EmployeeCRUDApp.Model.Service;
+global using CommunityToolkit.Maui.Alerts;
+global using System.Collections.ObjectModel;
+global using CommunityToolkit.Mvvm.Input;
+global using EmployeeCRUDApp.ViewModel;

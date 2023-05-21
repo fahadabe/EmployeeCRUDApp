@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EmployeeCRUDApp.View.EmployeesPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:EmployeeCRUDApp.ViewModel"
+    Title="Employees">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding GotoNewEmployeePageCommand}" Text="Add" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <CollectionView ItemsSource="{Binding Employees}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+
+                    <Border
+                        Margin="5,5,5,0"
+                        Padding="5"
+                        BackgroundColor="#292929"
+                        Stroke="Transparent">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="5" />
+                        </Border.StrokeShape>
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:EmployeeViewModel}}, Path=GotoEmployeeDetailsPageCommand}" CommandParameter="{Binding .}" />
+                        </Border.GestureRecognizers>
+
+                        <Grid RowDefinitions="Auto,Auto,Auto">
+                            <HorizontalStackLayout Grid.Row="0" Spacing="5">
+                                <Label FontSize="18" Text="{Binding FirstName}" />
+                                <Label FontSize="18" Text="{Binding LastName}" />
+                            </HorizontalStackLayout>
+                            <Label
+                                Grid.Row="1"
+                                Text="{Binding PhoneNumber}"
+                                TextColor="DarkGrey" />
+                            <Label
+                                Grid.Row="2"
+                                Text="{Binding Email}"
+                                TextColor="DarkGrey" />
+
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
+</ContentPage>

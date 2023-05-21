@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EmployeeCRUDApp.View.EmployeeDetailsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Emplopyee Details">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding DeleteEmployeeCommand}" Text="Delete" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+
+            <Label Text="First Name" />
+            <Entry Text="{Binding SelectedEmployee.FirstName}" />
+            <Label Text="Last Name" />
+            <Entry Text="{Binding SelectedEmployee.LastName}" />
+            <Label Text="Email" />
+            <Entry Keyboard="Email" Text="{Binding SelectedEmployee.Email}" />
+            <Label Text="Phone Number" />
+            <Entry Keyboard="Telephone" Text="{Binding SelectedEmployee.PhoneNumber}" />
+            <Label Text="Address" />
+            <Entry Text="{Binding SelectedEmployee.Address}" />
+            <Button Command="{Binding UpdateEmployeeCommand}" Text="Update" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
