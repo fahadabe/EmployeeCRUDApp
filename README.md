@@ -4,9 +4,15 @@ This is a simple Android app that shows how to do basic CRUD (Create, Read, Upda
 
 ## Features
 
-- Add a new employee with name, email, phone, address and department
+- Add a new employee with name, email, phone and department
 - View the list of all employees in a table
 - Edit or delete an existing employee
+- Search for an employee by name or department
+- Sort the employees by name or department
+
+## Screenshots
+
+(You can add some screenshots of your app here)
 
 ## How to run
 
@@ -17,4 +23,5 @@ This is a simple Android app that shows how to do basic CRUD (Create, Read, Upda
 - Press F5 or click on the green play button to run the app
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details
+
+This project is licensed under the MIT License
