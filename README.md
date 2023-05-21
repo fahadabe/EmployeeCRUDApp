@@ -15,3 +15,6 @@ This is a simple Android app that shows how to do basic CRUD (Create, Read, Upda
 - Open the solution file in Visual Studio
 - Select the Android emulator or device from the dropdown menu
 - Press F5 or click on the green play button to run the app
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details
